@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Aplikasi SITTA UT</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="login-body">
+    
+    <div class="login-wrapper">
+        <div class="login-card">
+            
+            <div class="form-section">
+                <div class="form-header">
+                    <h2>Sign In</h2>
+                    <p>Silakan masuk ke akun SITTA UT Anda</p>
+                </div>
+                
+                <form id="formLoginUtama">
+                    <div class="input-group">
+                        <i class="fa fa-envelope"></i>
+                        <input type="email" id="inputEmail" placeholder="Email" required>
+                    </div>
+                    <div class="input-group">
+                        <i class="fa fa-lock"></i>
+                        <input type="password" id="inputPassword" placeholder="Password" required>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary">Login</button>
+                    
+                    <div class="form-links">
+                        <a href="javascript:void(0)" id="btnLupaPass">Lupa Password?</a>
+                        <span>|</span>
+                        <a href="javascript:void(0)" id="btnDaftar">Daftar Akun Baru</a>
+                    </div>
+                </form>
+            </div>
+
+            <div class="banner-section">
+                <img src="img/ut.png" alt="Logo UT" class="banner-logo" style="max-width: 150px; margin-bottom: 20px;">
+                <h2>Welcome Back!</h2>
+                <p>Sistem Informasi Tiras dan Transaksi Bahan Ajar (SITTA) Universitas Terbuka.</p>
+            </div>
+
+        </div>
+    </div>
+    
+    <!-- Modal Lupa Password -->
+    <div id="modalLupaPassword" class="modal-overlay">
+        <div class="modal-box">
+            <span class="close-modal" id="closeLupaPass">&times;</span>
+            <h3>Reset Password</h3>
+            <p style="font-size: 14px; color: #666; margin-bottom: 15px;">Masukkan email terdaftar Anda.</p>
+            <input type="email" class="modal-input" placeholder="Masukkan Email">
+            <button class="btn-primary" onclick="alert('Tautan reset telah dikirim ke email Anda!')">Kirim Tautan</button>
+        </div>
+    </div>
+
+    <!-- Modal Daftar Akun -->
+    <div id="modalDaftarAkun" class="modal-overlay">
+        <div class="modal-box">
+            <span class="close-modal" id="closeDaftar">&times;</span>
+            <h3>Registrasi Akun Baru</h3>
+            <input type="text" class="modal-input" placeholder="Nama Lengkap">
+            <input type="email" class="modal-input" placeholder="Email UT">
+            <input type="password" class="modal-input" placeholder="Password Baru">
+            <button class="btn-primary" onclick="alert('Pendaftaran berhasil disubmit ke sistem.')">Register</button>
+        </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

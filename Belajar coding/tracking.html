@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lacak Pengiriman - SITTA UT</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="topbar">
+        <div class="logo">
+            <a href="dashboard.html"><img src="img/ut.png" alt="Logo UT" style="max-height: 45px;"></a>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="stock.html">Info Bahan Ajar</a></li>
+                <li><a href="tracking.html" style="color: #F4A21D;">Lacak Pengiriman</a></li>
+                <li class="dropdown">
+                    <div><a href="javascript:void(0)">Laporan <i class="fa-solid fa-angle-down"></i></a></div>
+                    <div class="dropdown-menu">
+                        <a href="#">Progress DO</a>
+                        <a href="#">Rekap Stok</a>
+                    </div>
+                </li>
+                <li><a href="#">Riwayat Transaksi</a></li>
+                <li><a href="javascript:void(0)" id="logoutBtn" class="btn-logout">Keluar</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main class="main-container">
+        <h2>Lacak Status Pengiriman (DO)</h2>
+        <div class="search-box">
+            <input type="text" id="inputDO" placeholder="Ketik Nomor Delivery Order (DO)... Contoh: 2023001234">
+            <button id="findBtn" style="width: auto; padding: 0 30px;"><i class="fa-solid fa-magnifying-glass"></i> Cari</button>
+        </div>
+
+        <!-- Wadah hasil pencarian akan muncul di sini via JavaScript -->
+        <div id="trackingResult"></div>
+    </main>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
